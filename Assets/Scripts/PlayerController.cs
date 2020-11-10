@@ -25,17 +25,6 @@ public class PlayerController : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
-
-    //Wallslide
-    //bool isTouchingFront;
-    //public Transform frontCheck;
-    //bool wallSliding;
-    //public float wallSlidingSpeed;
-    //bool wallJumping;
-    //public float xWallForce;
-    //public float yWallForce;
-    //public float wallJumpTime;
-
     //Dash
     public float dashSpeed = 30f;
     public float startDashTime = 0.1f;
@@ -68,6 +57,11 @@ public class PlayerController : MonoBehaviour
         if(isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            anim.SetBool("isJumping", false);
+        }
+        else
+        {
+            anim.SetBool("isJumping", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
@@ -81,36 +75,13 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
+            anim.SetTrigger("takeOf");
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        //isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
-
-        //if(isTouchingFront == true && isGrounded == false && moveInput != 0)
-        //{
-        //    wallSliding = true;
-        //}else
-        //{
-        //    wallSliding = false;
-        //}
-
-        //if(wallSliding)
-        //{
-        //    rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.Space) && wallSliding == true)
-        //{
-        //    wallJumping = true;
-        //    Invoke("SetWallJumpingToFalse", wallJumpTime);
-        //}
-
-        //if (wallJumping == true)
-        //{
-        //    rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
-        //}
+        
 
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
@@ -143,10 +114,7 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        //void SetWallJumpingToFalse()
-        //{
-        //    wallJumping = false;
-        //}
+        
 
         if(moveInput == 0)
         {
