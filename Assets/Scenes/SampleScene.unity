@@ -669,7 +669,7 @@ Animator:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25703fcc054d52b41a8d82e98fa433a8, type: 2}
+  m_Controller: {fileID: 9100000, guid: d8a07f4c0c68a824893b1e85f5c451da, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1021,6 +1021,7 @@ MonoBehaviour:
   extraJumpsValue: 0
   dashSpeed: 6
   startDashTime: 0.05
+  dashEffect: {fileID: 0}
 --- !u!50 &724237882
 Rigidbody2D:
   serializedVersion: 4
@@ -1370,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1287550575
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1993,6 +1994,8 @@ MonoBehaviour:
   extraJumpsValue: 1
   dashSpeed: 15
   startDashTime: 0.05
+  dashEffect: {fileID: 2898971666782388216, guid: af87a8a275e99894f95759e4da20c542,
+    type: 3}
 --- !u!50 &1769823639
 Rigidbody2D:
   serializedVersion: 4

@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public float startDashTime = 0.1f;
     private float dashTime;
     private int direction;
+    public GameObject dashEffect;
 
     //Animation
     private Animator anim;
@@ -139,10 +140,12 @@ public class PlayerController : MonoBehaviour
             {
                 if (moveInput < 0)
                 {
+                    Instantiate(dashEffect, transform.position, Quaternion.identity);
                     direction = 1;
                 }
                 else if (moveInput > 0)
                 {
+                    Instantiate(dashEffect, transform.position, Quaternion.identity);
                     direction = 2;
                 }
             }
