@@ -449,8 +449,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395229916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.325, y: -4.457, z: -35.193256}
-  m_LocalScale: {x: 3.2371047, y: 3.2606232, z: 1}
+  m_LocalPosition: {x: 10.325, y: -4.37, z: -35.193256}
+  m_LocalScale: {x: 3.2208607, y: 3.244261, z: 0.9949819}
   m_Children:
   - {fileID: 1911202571}
   - {fileID: 2011938684}
@@ -667,7 +667,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d8a07f4c0c68a824893b1e85f5c451da, type: 2}
   m_CullingMode: 0
@@ -1993,7 +1993,7 @@ MonoBehaviour:
   jumpTime: 0.2
   extraJumpsValue: 1
   dashSpeed: 15
-  startDashTime: 0.05
+  startDashTime: 0.1
   dashEffect: {fileID: 2898971666782388216, guid: af87a8a275e99894f95759e4da20c542,
     type: 3}
 --- !u!50 &1769823639
@@ -2076,7 +2076,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769823636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.979, y: 3.384, z: 2}
+  m_LocalPosition: {x: 5.979, y: 3.27, z: 2}
   m_LocalScale: {x: 3.073631, y: 3.0959618, z: 0.9495}
   m_Children:
   - {fileID: 1858758876}
