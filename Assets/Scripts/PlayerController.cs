@@ -6,8 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed;
-    
 
+    //Wall Jump
+    bool isTouchingFront;
+    public Transform frontCheck;
+    bool wallSliding;
+    public float wallSlidingSpeed;
+    bool wallJumping;
+    public float xWallForce;
+    public float yWallForce;
+    public float wallJumpTime;
 
     //Ground / Inputcheck
     private float moveInput;
@@ -115,9 +123,35 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
-        
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
 
-        if(moveInput == 0)
+        if(isTouchingFront == true && isGrounded == false && moveInput != 0)
+        {
+            wallSliding = true;
+            Debug.Log("wallSlide = true");
+        }
+        else
+        {
+            wallSliding = false;
+        }
+
+        if (wallSliding)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, wallSlidingSpeed, float.MaxValue));
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space) && wallSliding == true)
+        {
+            wallJumping = true;
+            Invoke("SetWallJumpingToFalse", wallJumpTime);
+        }
+
+        if(wallJumping == true)
+        {
+            rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
+        }
+
+        if (moveInput == 0)
         {
             anim.SetBool("isRunning", false);
         }
@@ -172,5 +206,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    void SetWallJumpingToFalse()
+    {
+        wallJumping = false;
     }
 }
