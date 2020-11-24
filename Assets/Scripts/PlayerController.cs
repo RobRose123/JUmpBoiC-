@@ -60,9 +60,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
-       
-
         if(isGrounded == true)
         {
             extraJumps = extraJumpsValue;
