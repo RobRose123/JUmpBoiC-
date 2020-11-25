@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if(isGrounded == true)
+        if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
             anim.SetBool("isJumping", false);
