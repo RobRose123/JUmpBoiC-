@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   frontCheck: {fileID: 7844975980297012697}
-  wallSlidingSpeed: 3
+  wallSlidingSpeed: 0
   xWallForce: 5
   yWallForce: 6
   wallJumpTime: 0.07
