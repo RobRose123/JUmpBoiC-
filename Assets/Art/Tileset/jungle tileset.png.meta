@@ -59,6 +59,9 @@ TextureImporter:
   - first:
       213: 1922136139609853226
     second: jungle tileset_18
+  - first:
+      213: -3934263221575823159
+    second: jungle tileset_19
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -602,7 +605,7 @@ TextureImporter:
         width: 112
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -610,6 +613,27 @@ TextureImporter:
       bones: []
       spriteID: a2dc26392acccaa10800000000000000
       internalID: 1922136139609853226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jungle tileset_19
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 61
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0d611d170b669c0800000000000000
+      internalID: -3934263221575823159
       vertices: []
       indices: 
       edges: []
