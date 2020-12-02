@@ -22,6 +22,7 @@ public class MainMenu : MonoBehaviour
         bool isFullscreen = (PlayerPrefs.GetInt("fullScreen") == 1) ? true:false;
     }
 
+
     public void LoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -36,6 +37,11 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quitting...");
+    }
+
+    public void MainBack()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void OptionsMenu()
