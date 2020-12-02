@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
+    public GameObject optionsMenuHolder;
     public void LoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -19,5 +21,30 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quitting...");
+    }
+
+    public void OptionsMenu()
+    {
+
+    }
+
+    public void SetScreenResolution(int i)
+    {
+
+    }
+
+    public void SetFullScreen(bool isFullsscreen)
+    {
+
+    }
+
+    public void SetMasterVolume(float value)
+    {
+
+    }
+
+    public void SetMusicVolume(float value)
+    {
+
     }
 }
